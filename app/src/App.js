@@ -13,6 +13,7 @@ const App = () => {
 
   return (
     <main className="App">
+      <h1>test</h1>
       <TaskList tasks={tasks} />
       <AddTask loadTasks={loadTasks} />
     </main>
