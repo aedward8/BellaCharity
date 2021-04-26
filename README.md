@@ -1,5 +1,8 @@
 # Bella Charity Website
 
+
+![alt text](https://github.com/aedward8/BellaCharity/blob/main/docs/images/BellaCharityLogo.png "Bella Charity Logo")
+
 ## About
 
 Bella Charity is a non-profit animal sanctuary and shelter! This website is the main online presence for the organization. It acts as a portal for people to learn more about the organization, adopt animals, foster animals, volunteer, and also donate! The main goal is to connect animals with forever homes & families while creating a safe environment for them throughout the process.
