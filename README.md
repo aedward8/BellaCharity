@@ -7,18 +7,38 @@
 
 Bella Charity is a non-profit animal sanctuary and shelter! This website is the main online presence for the organization. It acts as a portal for people to learn more about the organization, adopt animals, foster animals, volunteer, and also donate! The main goal is to connect animals with forever homes & families while creating a safe environment for them throughout the process.
 
-[See the app in action][live].
+[Check out the website!][live]
 
-[![Deploy to Heroku][deploy-badge]][deploy-workflow]
-[![Reset Heroku DB][reset-badge]][reset-workflow]
+
+## MVP Minimum Viable Product
+
+### Tier 1
+* Have a homepage with a navigation menu & links to adoption page
+* Adoption & Foster page that display all available animals in a table pulled from psql
+* Adoption & foster animal form results stored in Google sheets (API)
+
+### Tier 2
+* Transactional Email API (i.e Postmark or mail gun), send form results to coordinator's email
+* Volunteer Page with sign up form
+* About Us & Contact Us form
+* Mobile App page
+
+## Additional (Nice to haves)
+* Donation Page w/payment integration
+* Stripe API, Paypal, or Donor Box
+
+## Technical Risks
+The main goal is to use a Google API so that the form results are in Google Sheets. This would be great so that the nonprofit employees can have an easy way to access form data. However, if this is too difficult I will revert to storing the data in the psql database.
+
+An additional goal is to use a transactional email API such as Postman or Mail Gun to send form results or alerts to either the adoption coordinator or volunteer coordinator. Alternatively, this is a nice to have step as data would also be stored in Google Sheets or psql database.
 
 ## Technology
 
 The Bella Charity website will be built with the PERN stack, which includes Postgres, Express, React & Node.js.
 
-This project uses George Song’s github repo as baseplate template.It is a monorepo github project that will deploy to Heroku. Automatic deployment will also be available with every github merge to the main branch! Heroku deployment will include the use of Dockers & Heroku account.
+This project uses [George Song's][george] github repo as baseplate template.It is a monorepo github project that will deploy to Heroku. Automatic deployment will also be available with every github merge to the main branch! Heroku deployment will include the use of Dockers & a Heroku account.
 
-## Prerequisites
+## Installation & Technology Requirements
 
 ### Docker
 
@@ -90,13 +110,6 @@ Visit <http://localhost:3000>.
 ```sh
 npm run psql
 ```
-
-## Want More Details?
-
-- [Read about the application stack](docs/application-stack.md).
-- [Read about the Express server](server/README.md).
-- [Read about the React app](app/README.md).
-
 ## Deployment
 
 [Read about setting up and deploying to Heroku](docs/deployment.md).
@@ -105,8 +118,9 @@ npm run psql
 [deploy-workflow]: https://github.com/gsong/express-react-project-example/actions/workflows/deploy.yaml
 [dh-postgres]: https://hub.docker.com/_/postgres
 [docker-www]: https://docs.docker.com/get-docker/
+[george]: https://github.com/gsong/express-react-project-example
 [homebrew]: https://brew.sh
-[live]: https://tt-express-react-example.herokuapp.com
+[live]: https://bella-charity.herokuapp.com/
 [nvm]: https://github.com/nvm-sh/nvm
 [reset-badge]: https://github.com/gsong/express-react-project-example/actions/workflows/reset-db.yml/badge.svg
 [reset-workflow]: https://github.com/gsong/express-react-project-example/actions/workflows/reset-db.yml
