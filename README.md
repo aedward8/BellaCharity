@@ -1,20 +1,25 @@
-# Example Project With PostgreSQL, Express, and React
+# Bella Charity Website
 
-End-to-end React app backed by an Express API server, persisting data to
-PostgreSQL database. The project has a very simple interface that fetches data
-from a single table in the database, and allows you to add rows to that table.
+## About
+
+Bella Charity is a non-profit animal sanctuary and shelter! This website is the main online presence for the organization. It acts as a portal for people to learn more about the organization, adopt animals, foster animals, volunteer, and also donate! The main goal is to connect animals with forever homes & families while creating a safe environment for them throughout the process.
 
 [See the app in action][live].
 
 [![Deploy to Heroku][deploy-badge]][deploy-workflow]
 [![Reset Heroku DB][reset-badge]][reset-workflow]
 
+## Technology
+
+The Bella Charity website will be built with the PERN stack, which includes Postgres, Express, React & Node.js.
+
+This project uses George Song’s github repo as baseplate template.It is a monorepo github project that will deploy to Heroku. Automatic deployment will also be available with every github merge to the main branch! Heroku deployment will include the use of Dockers & Heroku account.
+
 ## Prerequisites
 
 ### Docker
 
-This project relies on Docker to run the PostgreSQL server. You must install
-Docker first before continuing.
+This project relies on Docker to run the PostgreSQL server. You must install Docker first before continuing.
 
 Use one of these methods:
 
