@@ -60,9 +60,14 @@ const Form = () => {
   const [age, setAge] = React.useState("");
   const [message, setMessage] = React.useState("");
 
-  const subForm = async (e) => {
+  const subForm = async () => {
     //e.preventDefault();
-    await apiClient.addEntry(full_name, email, age, message);
+    let res = await apiClient.addEntry(full_name, email, age, message);
+    console.log(res);
+    setFullName("");
+    setEmail("");
+    setAge("");
+    setMessage("");
   };
 
   return (
