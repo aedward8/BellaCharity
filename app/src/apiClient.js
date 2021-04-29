@@ -13,3 +13,25 @@ export const addTask = async (name) => {
   });
   return response.json();
 };
+
+// TEST API
+export const addEntry = async (full_name, email, age, message) => {
+  try {
+    const body = { data: { full_name, email, age, message } };
+    const response = await fetch(
+      "https://api.apispreadsheets.com/data/11586/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body), //  converts JS object to JSON string
+      },
+    );
+    console.log(response);
+    //converts from JSON to JS
+    return response.json();
+  } catch (err) {
+    console.log(err);
+  }
+};
