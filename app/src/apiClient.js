@@ -14,7 +14,7 @@ export const addTask = async (name) => {
   return response.json();
 };
 
-// TEST API
+// TEST Google Sheets API
 export const addEntry = async (full_name, email, age, message) => {
   try {
     const body = { data: { full_name, email, age, message } };
