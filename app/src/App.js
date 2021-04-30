@@ -21,7 +21,7 @@ const App = () => {
       <TaskList tasks={tasks} />
       <AddTask loadTasks={loadTasks} />
       <Form />
-      {/* <SignupForm /> */}
+      <SignupForm />
     </main>
   );
 };
