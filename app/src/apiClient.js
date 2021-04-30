@@ -35,3 +35,9 @@ export const addEntry = async (full_name, email, age, message) => {
     console.log(err);
   }
 };
+
+//Display animals
+export const getAnimals = async () => {
+  const response = await fetch("/api/animals");
+  return response.json();
+};
