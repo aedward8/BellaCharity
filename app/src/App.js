@@ -1,6 +1,10 @@
 import * as React from "react";
 
+import { useFormik } from "formik";
+
 import * as apiClient from "./apiClient";
+
+import "./styles.css";
 
 const App = () => {
   const [tasks, setTasks] = React.useState([]);
@@ -17,6 +21,7 @@ const App = () => {
       <TaskList tasks={tasks} />
       <AddTask loadTasks={loadTasks} />
       <Form />
+      {/* <SignupForm /> */}
     </main>
   );
 };
@@ -130,6 +135,34 @@ const Form = () => {
         <br />
       </form>
       <button onClick={() => subForm()}>Submit</button>
+    </>
+  );
+};
+
+//formik
+
+const SignupForm = () => {
+  const formik = useFormik({
+    initialValues: { email: "" },
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
+
+  return (
+    <>
+      <h1>Formik Form</h1>
+      <form onSubmit={formik.handleSubmit}>
+        <label htmlFor="email">Email Address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          onChange={formik.handleChange}
+          value={formik.values.email}
+        />
+        <button type="submit">Submit</button>
+      </form>
     </>
   );
 };
