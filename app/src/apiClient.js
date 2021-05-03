@@ -13,3 +13,23 @@ export const addTask = async (name) => {
   });
   return response.json();
 };
+
+// TEST API
+export const addEntry = async (full_name, email, age, message) => {
+  const body = { data: { full_name, email, age, message } };
+  const response = await fetch("/add-entry", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body), //  converts JS object to JSON string
+  });
+  console.log(response);
+  //converts from JSON to JS
+  //return response.json();
+  if (response.status === 201) {
+    return "Your form has been submitted!";
+  } else {
+    console.error();
+  }
+};
