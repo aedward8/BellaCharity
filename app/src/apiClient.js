@@ -17,7 +17,7 @@ export const addTask = async (name) => {
 // TEST API
 export const addEntry = async (full_name, email, age, message) => {
   const body = { data: { full_name, email, age, message } };
-  const response = await fetch("https://api.apispreadsheets.com/data/11586/", {
+  const response = await fetch("/add-entry", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
