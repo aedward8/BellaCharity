@@ -9,6 +9,9 @@ Bella Charity is a non-profit animal sanctuary and shelter! This website is the 
 
 [Check out the website!][live]
 
+![workflow](https://github.com/aedward8/BellaCharity/actions/workflows/deploy.yaml/badge.svg)
+
+
 
 ## MVP Minimum Viable Product
 
