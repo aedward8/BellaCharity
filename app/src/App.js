@@ -60,6 +60,7 @@ const AddTask = ({ loadTasks }) => {
   );
 };
 
+// Pay attention to the name attribute of the <input> tags. These will be the column headers of our spreadsheet we save the data in and they MUST match up.
 const Form = () => {
   const [full_name, setFullName] = React.useState("");
   const [email, setEmail] = React.useState("");
