@@ -168,7 +168,7 @@ const SignupForm = () => (
         <Field label="Last Name" name="lastName" />
         <Field label="Email" name="email" type="email" />
         <br />
-        <button type="submit">Submit</button>
+        <button>Submit</button>
       </Form>
     </Formik>
   </>
