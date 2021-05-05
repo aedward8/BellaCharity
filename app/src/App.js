@@ -21,7 +21,7 @@ const App = () => {
       <h1>test</h1>
       <TaskList tasks={tasks} />
       <AddTask loadTasks={loadTasks} />
-      <Form />
+      <ApiForm />
       <SignupForm />
     </main>
   );
@@ -61,7 +61,7 @@ const AddTask = ({ loadTasks }) => {
 };
 
 // Pay attention to the name attribute of the <input> tags. These will be the column headers of our spreadsheet we save the data in and they MUST match up.
-const Form = () => {
+const ApiForm = () => {
   const [full_name, setFullName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [age, setAge] = React.useState("");
