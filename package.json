@@ -1,5 +1,5 @@
 {
-  "name": "express-react-project-example",
+  "name": "bella-charity",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -29,11 +29,10 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gsong/express-react-project-example/issues"
+    "url": "https://github.com/aedward8/BellaCharity/issues"
   },
-  "homepage": "https://github.com/gsong/express-react-project-example#readme",
+  "homepage": "https://github.com/aedward8/BellaCharity#readme",
   "dependencies": {
-    "@reach/router": "^1.3.4",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2"
   }
