@@ -1,79 +1,102 @@
 import * as React from "react";
 
-import { useFormik } from "formik";
+import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+
+import "../styles.css";
+import * as apiClient from "../apiClient";
 
 //Formik
 
 const SignupForm = () => {
-  const formik = useFormik({
-    initialValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-    },
-    validationSchema: Yup.object({
-      firstName: Yup.string()
-        .max(15, "Must be 15 characters or less")
-        .required("Required"),
-      lastName: Yup.string()
-        .max(20, "Must be 20 characters or less")
-        .required("Required"),
-      email: Yup.string().email("Invalid email address").required("Required"),
-    }),
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
-
   return (
-    <>
-      <h1>Formik Form</h1>
-      <form onSubmit={formik.handleSubmit}>
-        {/* Pass the useFormik() hook initial form values and a submit function that will
-        be called when the form is submitted */}
+    <Formik
+      initialValues={{
+        firstName: "",
+        lastName: "",
+        email: "",
+        address: "",
+        message: "",
+        expertise: [],
+        acceptedTerms: false,
+      }}
+      validationSchema={Yup.object({
+        firstName: Yup.string()
+          .max(15, "Must be 15 characters or less")
+          .required("Required"),
+        lastName: Yup.string()
+          .max(20, "Must be 20 characters or less")
+          .required("Required"),
+        email: Yup.string().email("Invalid email address").required("Required"),
+      })}
+      onSubmit={async (values, { setSubmitting, resetForm }) => {
+        setTimeout(() => {
+          console.log(values);
+          alert(JSON.stringify(values, null, 2));
+          setSubmitting(false);
+        }, 400);
+
+        console.log({ values });
+        await apiClient.addEntry({ values });
+
+        resetForm();
+      }}
+    >
+      <Form>
         <label htmlFor="firstName">First Name</label>
-        <input
-          id="firstName"
-          name="firstName"
-          type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.firstName}
-        />
-        {formik.touched.firstName && formik.errors.firstName ? (
-          <div>{formik.errors.firstName}</div>
-        ) : null}
+        <Field name="firstName" type="text" />
+        {/* field component has handleChange,handleBlur, & values */}
+        <ErrorMessage name="firstName" />
 
         <label htmlFor="lastName">Last Name</label>
-        <input
-          id="lastName"
-          name="lastName"
-          type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.lastName}
-        />
-        {formik.touched.lastName && formik.errors.lastName ? (
-          <div>{formik.errors.lastName}</div>
-        ) : null}
+        <Field name="lastName" type="text" />
+        <ErrorMessage name="lastName" />
 
         <label htmlFor="email">Email Address</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.email}
-        />
-        {formik.touched.email && formik.errors.email ? (
-          <div>{formik.errors.email}</div>
-        ) : null}
-        <br />
-        <button type="submit">Submit</button>
-      </form>
-    </>
+        <Field name="email" type="email" />
+        <ErrorMessage name="email" />
+
+        <label htmlFor="address">Address</label>
+        <Field name="address" type="text" />
+        <ErrorMessage name="address" />
+
+        <div id="expertise-group">
+          Check Areas of expertise
+          <label htmlFor="Foster Home Experience">
+            <Field
+              name="expertise"
+              type="checkbox"
+              value="Foster Home Experience"
+            />
+            Foster Home Experience
+          </label>
+          <label htmlFor="Animal Care">
+            <Field name="expertise" type="checkbox" value="Animal Care" />
+            Animal Care
+          </label>
+          <label htmlFor="Veterinary Services">
+            <Field
+              name="expertise"
+              type="checkbox"
+              value="Veterinary Services"
+            />
+            Veterinary Services
+          </label>
+        </div>
+
+        <label htmlFor="message">Your Message</label>
+        <Field name="message" as="textarea" />
+
+        <label htmlFor="acceptedTerms">
+          <Field name="acceptedTerms" type="checkbox" /> I Agree to The Bella
+          Charity Terms and Conditions
+        </label>
+
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </Form>
+    </Formik>
   );
 };
 
