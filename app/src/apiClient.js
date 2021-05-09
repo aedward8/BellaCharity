@@ -14,11 +14,19 @@ export const addTask = async (name) => {
   return response.json();
 };
 
-// TEST Google Sheets API
-export const addEntry = async (full_name, email, age, message) => {
+//Google Sheets API w/ Formik
+export const addEntry = async (
+  firstName,
+  lastName,
+  email,
+  address,
+  message,
+  expertise,
+) => {
   try {
+    console.log("hi");
     const body = {
-      data: { full_name, email, age, message },
+      data: { firstName, lastName, email, address, message, expertise },
     };
     const response = await fetch("/add-entry", {
       method: "POST",
@@ -34,6 +42,27 @@ export const addEntry = async (full_name, email, age, message) => {
     console.log(err);
   }
 };
+
+//TEST Google Sheets API
+// export const addEntry = async (full_name, email, age, message) => {
+//   try {
+//     const body = {
+//       data: { full_name, email, age, message },
+//     };
+//     const response = await fetch("/add-entry", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(body), //  converts JS object to JSON string
+//     });
+//     console.log(response);
+//     //converts from JSON to JS
+//     return response.json();
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
 
 //Display animals
 export const getAnimals = async () => {

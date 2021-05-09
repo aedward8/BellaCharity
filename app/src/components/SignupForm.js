@@ -31,14 +31,35 @@ const SignupForm = () => {
       })}
       onSubmit={async (values, { setSubmitting, resetForm }) => {
         setTimeout(() => {
-          console.log(values);
+          // console.log(values);
           alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
         }, 400);
 
-        console.log({ values });
-        await apiClient.addEntry({ values });
+        console.log("signupform", { values });
+        let firstName, lastName, email, address, message, expertise;
 
+        ({ firstName, lastName, email, address, message, expertise } = {
+          ...values,
+        });
+        expertise = expertise.join();
+        // console.log(
+        //   "variables",
+        //   firstName,
+        //   lastName,
+        //   email,
+        //   address,
+        //   message,
+        //   expertise,
+        // );
+        await apiClient.addEntry(
+          firstName,
+          lastName,
+          email,
+          address,
+          message,
+          expertise,
+        );
         resetForm();
       }}
     >
