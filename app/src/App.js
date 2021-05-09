@@ -6,8 +6,7 @@ import { Router } from "@reach/router";
 import About from "./components/About";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
-
-import "./styles.css";
+import SignupForm from "./components/SignupForm";
 
 const App = () => {
   return (
@@ -16,6 +15,7 @@ const App = () => {
       <Router>
         <Home path="/" />
         <About path="/about" />
+        <SignupForm path="/signup-form" />
       </Router>
       {/* <main className="App">
       </main> */}

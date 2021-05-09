@@ -4,7 +4,6 @@ import * as apiClient from "../apiClient";
 
 import AddTask from "./AddTask";
 import Form from "./Form";
-import SignupForm from "./SignupForm";
 import TaskList from "./TaskList";
 
 const Home = () => {
@@ -23,7 +22,6 @@ const Home = () => {
       <TaskList tasks={tasks} />
       <AddTask loadTasks={loadTasks} />
       <Form />
-      <SignupForm />
     </div>
   );
 };

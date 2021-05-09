@@ -14,10 +14,21 @@ export const addTask = async (name) => {
   return response.json();
 };
 
+// await apiClient.addEntry(firstName,lastName, email, address, message, expertise);
+
 // TEST Google Sheets API
-export const addEntry = async (full_name, email, age, message) => {
+export const addEntry = async (
+  firstName,
+  lastName,
+  email,
+  address,
+  message,
+  expertise,
+) => {
   try {
-    const body = { data: { full_name, email, age, message } };
+    const body = {
+      data: { firstName, lastName, email, address, message, expertise },
+    };
     const response = await fetch(
       "https://api.apispreadsheets.com/data/11586/",
       {
