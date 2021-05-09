@@ -14,31 +14,19 @@ export const addTask = async (name) => {
   return response.json();
 };
 
-// await apiClient.addEntry(firstName,lastName, email, address, message, expertise);
-
 // TEST Google Sheets API
-export const addEntry = async (
-  firstName,
-  lastName,
-  email,
-  address,
-  message,
-  expertise,
-) => {
+export const addEntry = async (full_name, email, age, message) => {
   try {
     const body = {
-      data: { firstName, lastName, email, address, message, expertise },
+      data: { full_name, email, age, message },
     };
-    const response = await fetch(
-      "https://api.apispreadsheets.com/data/11586/",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(body), //  converts JS object to JSON string
+    const response = await fetch("/add-entry", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-    );
+      body: JSON.stringify(body), //  converts JS object to JSON string
+    });
     console.log(response);
     //converts from JSON to JS
     return response.json();
