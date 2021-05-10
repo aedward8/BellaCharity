@@ -71,6 +71,8 @@ COPY public.tasks (id, name) FROM stdin;
 3	End white supremacy
 4	Advocate for living wage
 5	Provide universal health care
+6	Eat healthy food
+7	sleep
 \.
 
 
