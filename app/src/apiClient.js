@@ -20,12 +20,21 @@ export const addEntry = async (
   lastName,
   email,
   address,
-  message,
+  whyVolunteer,
+  fosterExperience,
   expertise,
 ) => {
   try {
     const body = {
-      data: { firstName, lastName, email, address, message, expertise },
+      data: {
+        firstName,
+        lastName,
+        email,
+        address,
+        whyVolunteer,
+        fosterExperience,
+        expertise,
+      },
     };
     const response = await fetch("/add-entry", {
       method: "POST",
