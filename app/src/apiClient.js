@@ -24,7 +24,6 @@ export const addEntry = async (
   expertise,
 ) => {
   try {
-    console.log("hi");
     const body = {
       data: { firstName, lastName, email, address, message, expertise },
     };
