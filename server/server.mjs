@@ -3,24 +3,47 @@ import mime from "mime-types";
 
 import * as db from "./db.mjs";
 
+import fetch from "node-fetch";
+
 const app = express();
 const port = process.env.PORT || 4000;
 
+//new router
 const tasks = express.Router();
+// use task router
+app.use("/api/tasks", tasks);
 
 tasks.get("/", async (request, response) => {
   const tasks = await db.getTasks();
   response.json(tasks);
 });
 
+//body parser
 tasks.use(express.json());
+
 tasks.post("/", async (request, response) => {
   const { name } = request.body;
   const task = await db.addTask(name);
   response.status(201).json(task);
 });
 
-app.use("/api/tasks", tasks);
+// Express body parser - very important
+app.use(express.json());
+app.post("/add-entry", async (request, response) => {
+  console.log(request.body);
+
+  // let signal that variable will change, BP default is const
+  // result is like a receipt w/url
+  const result = await fetch("https://api.apispreadsheets.com/data/11586/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(request.body), //  converts JS object to JSON string
+  });
+  //console.log({ result });
+  return response.json({ success: "woot" });
+});
 
 process.env?.SERVE_REACT?.toLowerCase() === "true" &&
   app.use(
