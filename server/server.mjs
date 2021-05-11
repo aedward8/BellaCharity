@@ -45,6 +45,12 @@ app.post("/add-entry", async (request, response) => {
   return response.json({ success: "woot" });
 });
 
+// get animal List
+app.get("/api/animals", async (request, response) => {
+  const animals = await db.getAnimals();
+  response.json(animals);
+});
+
 process.env?.SERVE_REACT?.toLowerCase() === "true" &&
   app.use(
     express.static("/app", {
