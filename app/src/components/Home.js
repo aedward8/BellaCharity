@@ -1,9 +1,8 @@
 import * as React from "react";
 
+// import AddTask from "./AddTask";
 import * as apiClient from "../apiClient";
 
-// import AddTask from "./AddTask";
-import AnimalList from "./AnimalList";
 import Form from "./Form";
 // import TaskList from "./TaskList";
 
@@ -28,7 +27,7 @@ const Home = () => {
       {/* <TaskList tasks={tasks} />
       <AddTask loadTasks={loadTasks} /> */}
       <Form />
-      <AnimalList animals={animals} />
+      {/* <AnimalList animals={animals} /> */}
     </div>
   );
 };

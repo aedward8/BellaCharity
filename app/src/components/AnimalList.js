@@ -1,35 +1,26 @@
 import * as React from "react";
 
-import images from "../photos";
+import AnimalCard from "./AnimalCard";
 
 const AnimalList = ({ animals }) => {
+  let cards = animals.map((animal, index) => (
+    <AnimalCard key={animal.id} {...animal} />
+  ));
+
   return (
-    <ul>
-      {animals.map(
-        ({
-          id,
-          name,
-          age,
-          weight,
-          gender,
-          breed,
-          blurb,
-          foster,
-          picture_link,
-        }) => (
-          <li key={id}>
-            {name}
-            {age}
-            {weight}
-            {gender}
-            {breed}
-            {foster},
-            <img src={images[picture_link]} alt="test" />
-            <p>{blurb}</p>
-          </li>
-        ),
-      )}
-    </ul>
+    <>
+      <h1>Cards</h1>
+      <div
+        style={{
+          overflowY: "scroll",
+          maxHeight: "300px",
+          borderStyle: "solid",
+          borderColor: "white",
+        }}
+      >
+        {cards}
+      </div>
+    </>
   );
 };
 

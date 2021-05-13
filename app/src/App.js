@@ -4,6 +4,7 @@ import { Router } from "@reach/router";
 
 // import * as apiClient from "./apiClient";
 import About from "./components/About";
+import Adoptions from "./components/Adoptions";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
 import SignupForm from "./components/SignupForm";
@@ -15,6 +16,7 @@ const App = () => {
       <Router>
         <Home path="/" />
         <About path="/about" />
+        <Adoptions path="/adopt" />
         <SignupForm path="/signup-form" />
       </Router>
       {/* <main className="App">
