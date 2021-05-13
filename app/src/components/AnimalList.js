@@ -3,7 +3,7 @@ import * as React from "react";
 import AnimalCard from "./AnimalCard";
 
 const AnimalList = ({ animals }) => {
-  let cards = animals.map((animal, index) => (
+  let cards = animals.map((animal) => (
     <AnimalCard key={animal.id} {...animal} />
   ));
 
