@@ -2,11 +2,12 @@ import * as React from "react";
 
 import * as apiClient from "../apiClient";
 
-const Home = () => {
-  // const [tasks, setTasks] = React.useState([]);
+import AnimalList from "./AnimalList";
+import VolunteerButton from "./VolunteerButton";
+
+const Adoptions = () => {
   const [animals, setAnimals] = React.useState([]);
-  //testing
-  // const loadTasks = async () => setTasks(await apiClient.getTasks());
+
   const loadAnimals = async () => setAnimals(await apiClient.getAnimals());
 
   React.useEffect(() => {
@@ -17,10 +18,11 @@ const Home = () => {
 
   return (
     <div>
-      This is Home
-      <h1>test</h1>
+      <h1>This is Adoption Page</h1>
+      <AnimalList animals={animals} />
+      <VolunteerButton />
     </div>
   );
 };
 
-export default Home;
+export default Adoptions;

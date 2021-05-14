@@ -45,7 +45,17 @@ app.post("/add-entry", async (request, response) => {
   return response.json({ success: "woot" });
 });
 
-process.env?.SERVE_REACT?.toLowerCase() === "true" &&
+// get animal List
+app.get("/api/animals", async (request, response) => {
+  const animals = await db.getAnimals();
+  response.json(animals);
+});
+
+app.get("/api/ping", (request, response) =>
+  response.json({ response: "pong" }),
+);
+
+if (process.env?.SERVE_REACT?.toLowerCase() === "true") {
   app.use(
     express.static("/app", {
       maxAge: "1d",
@@ -55,9 +65,10 @@ process.env?.SERVE_REACT?.toLowerCase() === "true" &&
     }),
   );
 
-app.get("/api/ping", (request, response) =>
-  response.json({ response: "pong" }),
-);
+  app.get("*", (req, res) => {
+    res.sendFile("/app/index.html");
+  });
+}
 
 app.listen(port, () => {
   console.info(`Example server listening at http://localhost:${port}`);
