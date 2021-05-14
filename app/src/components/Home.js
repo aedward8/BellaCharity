@@ -1,24 +1,26 @@
 import * as React from "react";
 
-import * as apiClient from "../apiClient";
-
 const Home = () => {
-  // const [tasks, setTasks] = React.useState([]);
-  const [animals, setAnimals] = React.useState([]);
-  //testing
-  // const loadTasks = async () => setTasks(await apiClient.getTasks());
-  const loadAnimals = async () => setAnimals(await apiClient.getAnimals());
-
-  React.useEffect(() => {
-    loadAnimals();
-  }, []);
-
-  console.log(animals);
+  React.useEffect(() => {}, []);
 
   return (
     <div>
       This is Home
-      <h1>test</h1>
+      <h1>Welcome to Bella Charity!</h1>
+      <div className="mission">
+        <h4>
+          The Bella Charity’s mission is to save and improve lives wherever
+          possible. Ultimately, The Bella Charity aims to create a
+          well-functioning sanctuary where animals can be rescued, sheltered,
+          and properly cared for. In addition to this long-term goal, The Bella
+          Charity is actively pursuing projects to help animals. A few of the
+          projects include: Create a Mobile Application to easily connect
+          adoptable and foster-able pets to people. A link to download from the
+          App store will be available soon. Create a network of foster homes,
+          veterinarians, and animal care workers to house and aid animals in
+          need.
+        </h4>
+      </div>
     </div>
   );
 };
