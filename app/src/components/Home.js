@@ -1,10 +1,6 @@
 import * as React from "react";
 
-// import AddTask from "./AddTask";
 import * as apiClient from "../apiClient";
-
-import Form from "./Form";
-// import TaskList from "./TaskList";
 
 const Home = () => {
   // const [tasks, setTasks] = React.useState([]);
@@ -14,7 +10,6 @@ const Home = () => {
   const loadAnimals = async () => setAnimals(await apiClient.getAnimals());
 
   React.useEffect(() => {
-    // loadTasks();
     loadAnimals();
   }, []);
 
@@ -24,10 +19,6 @@ const Home = () => {
     <div>
       This is Home
       <h1>test</h1>
-      {/* <TaskList tasks={tasks} />
-      <AddTask loadTasks={loadTasks} /> */}
-      <Form />
-      {/* <AnimalList animals={animals} /> */}
     </div>
   );
 };
