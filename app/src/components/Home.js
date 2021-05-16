@@ -1,15 +1,17 @@
 import * as React from "react";
 
 import Image from "react-bootstrap/Image";
+
+import MainPhoto from "../photos/bella-main.jpg";
+
 const Home = () => {
   React.useEffect(() => {}, []);
 
   return (
     <div>
-      This is Home
       <h1>Welcome to Bella Charity!</h1>
       <div className="mission">
-        <Image src="holder.js/100px250" fluid />
+        <Image src={MainPhoto} fluid />
         <h4>
           The Bella Charity’s mission is to save and improve lives wherever
           possible. Ultimately, The Bella Charity aims to create a
