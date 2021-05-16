@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import Image from "react-bootstrap/Image";
 const Home = () => {
   React.useEffect(() => {}, []);
 
@@ -8,6 +9,7 @@ const Home = () => {
       This is Home
       <h1>Welcome to Bella Charity!</h1>
       <div className="mission">
+        <Image src="holder.js/100px250" fluid />
         <h4>
           The Bella Charity’s mission is to save and improve lives wherever
           possible. Ultimately, The Bella Charity aims to create a
