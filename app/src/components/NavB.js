@@ -33,7 +33,9 @@ const NavB = () => {
           <Nav.Link href="/adopt">Adoption Page</Nav.Link>
           <NavDropdown title="Quick Links" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Donate</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Download App</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">
+              Download Mobile App
+            </NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3">
               Volunteer or Foster
             </NavDropdown.Item>
