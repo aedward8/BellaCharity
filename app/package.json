@@ -36,6 +36,7 @@
     "bootstrap": "^4.6.0",
     "formik": "^2.2.6",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.6.0",
     "react-dom": "^17.0.1",
     "react-scripts": "^4.0.3",
     "web-vitals": "^1.0.1",
