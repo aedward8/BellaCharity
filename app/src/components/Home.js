@@ -3,6 +3,11 @@ import * as React from "react";
 import Image from "react-bootstrap/Image";
 
 import MainPhoto from "../photos/bella-main.jpg";
+import Foster from "../photos/khaleesi.jpeg";
+import Adopt from "../photos/osito.JPG";
+import Resident from "../photos/resident-bella.png";
+
+import FrontPageCard from "./FrontPageCard";
 
 const Home = () => {
   React.useEffect(() => {}, []);
@@ -24,6 +29,23 @@ const Home = () => {
           veterinarians, and animal care workers to house and aid animals in
           need.
         </h4>
+      </div>
+      <div className="cards">
+        <FrontPageCard
+          name="Resident Animals"
+          desc="Say hi to some of our forever animals that we couldn't bear to say goodbye to!"
+          img={Resident}
+        />
+        <FrontPageCard
+          name="Adopt Me"
+          desc="View all the furbabies that are available to be adopted into your family"
+          img={Adopt}
+        />
+        <FrontPageCard
+          name="Foster Me"
+          desc="Some of our rescues need practice being inside a home and socializing with humans before they are ready for adoption"
+          img={Foster}
+        />
       </div>
     </div>
   );
