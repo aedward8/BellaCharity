@@ -8,6 +8,7 @@ import Adopt from "../photos/osito.JPG";
 import Resident from "../photos/resident-bella.png";
 
 import FrontPageCard from "./FrontPageCard";
+import HomeButtons from "./HomeButtons";
 
 const Home = () => {
   React.useEffect(() => {}, []);
@@ -47,6 +48,8 @@ const Home = () => {
           img={Foster}
         />
       </div>
+      <h1>Get Involved</h1>
+      <HomeButtons />
     </div>
   );
 };
