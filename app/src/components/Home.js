@@ -16,9 +16,12 @@ const Home = () => {
   return (
     <div>
       <h1>Welcome to Bella Charity!</h1>
-      <div className="mission">
+      <div
+        className="mission"
+        style={{ display: "flex ", marginBottom: "1rem" }}
+      >
         <Image src={MainPhoto} fluid />
-        <h4>
+        <h4 style={{ marginLeft: "1rem" }}>
           The Bella Charity’s mission is to save and improve lives wherever
           possible. Ultimately, The Bella Charity aims to create a
           well-functioning sanctuary where animals can be rescued, sheltered,
@@ -31,7 +34,10 @@ const Home = () => {
           need.
         </h4>
       </div>
-      <div className="cards">
+      <div
+        className="cards"
+        style={{ display: "flex ", "justify-content": "space-between" }}
+      >
         <FrontPageCard
           name="Resident Animals"
           desc="Say hi to some of our forever animals that we couldn't bear to say goodbye to!"
@@ -48,8 +54,16 @@ const Home = () => {
           img={Foster}
         />
       </div>
-      <h1>Get Involved</h1>
-      <HomeButtons />
+      <div
+        style={{
+          display: "flex ",
+          "flex-direction": "column",
+          "justify-content": "center",
+        }}
+      >
+        <h1>Get Involved</h1> <br />
+        <HomeButtons />
+      </div>
     </div>
   );
 };
