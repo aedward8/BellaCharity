@@ -1,6 +1,6 @@
 import * as React from "react";
+/** @jsxImportSource @emotion/react */
 
-// import { jsx } from "@emotion/react";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import PhoneIphoneIcon from "@material-ui/icons/PhoneIphone";
 // import { Link } from "@reach/router";
@@ -12,17 +12,14 @@ import Logo from "../photos/bellaCharityLogo.png";
 
 const NavB = () => {
   return (
-    // {/* <Link to="/">Home</Link>
-    // <Link to="/about">About</Link>
-    // <Link to="/adopt">Adoptions</Link>
     // <Link to="/signup-form">Volunteer Form</Link> */}
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Navbar.Brand href="/">
         <img
           src={Logo}
           alt="logo - paw in hand"
-          // css={{ maxHeight: "100px", width: "auto" }}
-          style={{ maxHeight: "50px", width: "auto" }}
+          css={{ maxHeight: "50px", width: "auto" }}
+          // style={{ maxHeight: "50px", width: "auto" }}
           // style={"object-Fit:contain"}
         />
       </Navbar.Brand>
