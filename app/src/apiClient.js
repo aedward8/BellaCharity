@@ -40,3 +40,10 @@ export const getAnimals = async () => {
   const response = await fetch("/api/animals");
   return response.json();
 };
+
+// Get Dog Fact
+export const getFact = async () => {
+  const response = await fetch("/api/dogfact");
+  console.log(response);
+  return response.json();
+};
