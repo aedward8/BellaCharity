@@ -41,7 +41,6 @@ app.post("/add-entry", async (request, response) => {
     },
     body: JSON.stringify(request.body), //  converts JS object to JSON string
   });
-  //console.log({ result });
   return response.json({ success: "woot" });
 });
 
@@ -49,6 +48,15 @@ app.post("/add-entry", async (request, response) => {
 app.get("/api/animals", async (request, response) => {
   const animals = await db.getAnimals();
   response.json(animals);
+});
+
+// Get Dog Fact
+app.get("/api/dogfact", async (request, response) => {
+  const fact = await fetch(
+    "https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1",
+  );
+  console.log(fact);
+  return response.json(await fact.json());
 });
 
 app.get("/api/ping", (request, response) =>
