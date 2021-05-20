@@ -4,6 +4,7 @@ import { Router } from "@reach/router";
 
 import About from "./components/About";
 import Adoptions from "./components/Adoptions";
+import Footer from "./components/Footer";
 import Home from "./components/Home";
 import NavB from "./components/NavB";
 import SignupForm from "./components/SignupForm";
@@ -20,6 +21,7 @@ const App = () => {
       </Router>
       {/* <main className="App">
       </main> */}
+      <Footer />
     </>
   );
 };
