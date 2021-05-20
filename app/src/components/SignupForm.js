@@ -7,7 +7,6 @@ import "../styles.css";
 import * as apiClient from "../apiClient";
 
 //Formik
-
 const SignupForm = () => {
   return (
     <Formik
@@ -16,8 +15,9 @@ const SignupForm = () => {
         lastName: "",
         email: "",
         address: "",
-        message: "",
         expertise: [],
+        whyVolunteer: "",
+        fosterExperience: "",
         acceptedTerms: false,
       }}
       validationSchema={Yup.object({
@@ -28,17 +28,50 @@ const SignupForm = () => {
           .max(20, "Must be 20 characters or less")
           .required("Required"),
         email: Yup.string().email("Invalid email address").required("Required"),
+        acceptedTerms: Yup.bool().oneOf(
+          [true],
+          "Accept Terms & Conditions is required",
+        ),
       })}
       onSubmit={async (values, { setSubmitting, resetForm }) => {
         setTimeout(() => {
-          console.log(values);
           alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
         }, 400);
 
-        console.log({ values });
-        await apiClient.addEntry({ values });
-
+        // console.log("signupform", { values });
+        //create variables to destructure out of values
+        let firstName,
+          lastName,
+          email,
+          address,
+          whyVolunteer,
+          fosterExperience,
+          expertise;
+        // destructuring occurs below
+        ({
+          firstName,
+          lastName,
+          email,
+          address,
+          whyVolunteer,
+          fosterExperience,
+          expertise,
+        } = {
+          ...values,
+        });
+        //join the string in the expertise array into one string
+        expertise = expertise.join();
+        //send variable values in the correct format to be sent to the Google sheets API
+        await apiClient.addEntry(
+          firstName,
+          lastName,
+          email,
+          address,
+          whyVolunteer,
+          fosterExperience,
+          expertise,
+        );
         resetForm();
       }}
     >
@@ -84,13 +117,22 @@ const SignupForm = () => {
           </label>
         </div>
 
-        <label htmlFor="message">Your Message</label>
-        <Field name="message" as="textarea" />
+        <label htmlFor="whyVolunteer">
+          Describe why you would like to volunteer and how you think you can
+          help if applicable
+        </label>
+        <Field name="whyVolunteer" as="textarea" />
+
+        <label htmlFor="fosterExperience">
+          Describe Foster Home Experience if applicable
+        </label>
+        <Field name="fosterExperience" as="textarea" />
 
         <label htmlFor="acceptedTerms">
           <Field name="acceptedTerms" type="checkbox" /> I Agree to The Bella
           Charity Terms and Conditions
         </label>
+        <ErrorMessage name="acceptedTerms" />
 
         <div>
           <button type="submit">Submit</button>

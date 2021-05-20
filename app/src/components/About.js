@@ -1,12 +1,13 @@
 import * as React from "react";
 
-// import DogFact from "./DogFact";
+import DogFact from "./DogFact";
+
 
 const About = () => {
   return (
     <div>
       This is About us
-      {/* <DogFact /> */}
+      <DogFact />
     </div>
   );
 };

@@ -5,13 +5,17 @@ import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 
+
 import MainPhoto from "../photos/bella-main.jpg";
 import Foster from "../photos/khaleesi.jpeg";
 import Adopt from "../photos/osito.JPG";
 import Resident from "../photos/resident-bella.png";
 
+import Form from "./Form";
+
 import FrontPageCard from "./FrontPageCard";
 import HomeButtons from "./HomeButtons";
+
 
 const Home = () => {
   React.useEffect(() => {}, []);
