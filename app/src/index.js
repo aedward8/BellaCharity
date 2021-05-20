@@ -4,9 +4,10 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles-basics.css";
-//import "./styles.css";
+
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 
 ReactDOM.render(
