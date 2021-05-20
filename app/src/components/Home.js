@@ -2,6 +2,7 @@ import * as React from "react";
 
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 
 import MainPhoto from "../photos/bella-main.jpg";
@@ -21,10 +22,10 @@ const Home = () => {
         <h1>Welcome to Bella Charity!</h1>
       </Container>
 
-      <Container>
+      <Container style={{ marginBottom: "2rem" }}>
         <Row>
           <Col xs={12} md={6}>
-            <img src={MainPhoto} alt="Pitbull named Bella" />
+            <Image src={MainPhoto} alt="Pitbull named Bella" fluid />
           </Col>
           <Col xs={12} md={6}>
             <h4 style={{ marginLeft: "1rem" }}>
