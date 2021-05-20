@@ -5,6 +5,8 @@ const db = initDb();
 
 export const getTasks = async () => await db.any("SELECT * FROM tasks");
 
+export const getAnimals = async () => await db.any("SELECT * FROM animals");
+
 export const addTask = async (name) =>
   (
     await db.any("INSERT INTO tasks(name) VALUES($1) RETURNING id, name", [

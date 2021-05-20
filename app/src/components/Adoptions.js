@@ -2,34 +2,27 @@ import * as React from "react";
 
 import * as apiClient from "../apiClient";
 
-import Form from "./Form";
+import AnimalList from "./AnimalList";
+import VolunteerButton from "./VolunteerButton";
 
-const Home = () => {
-  React.useEffect(() => {}, []);
-
-const Home = () => {
-  // const [tasks, setTasks] = React.useState([]);
+const Adoptions = () => {
   const [animals, setAnimals] = React.useState([]);
-  //testing
-  // const loadTasks = async () => setTasks(await apiClient.getTasks());
+
   const loadAnimals = async () => setAnimals(await apiClient.getAnimals());
 
   React.useEffect(() => {
     loadAnimals();
   }, []);
 
-
   console.log(animals);
 
   return (
     <div>
-      This is Home
-      <h1>test</h1>
-
-      <Form />
-
+      <h1>This is Adoption Page</h1>
+      <AnimalList animals={animals} />
+      <VolunteerButton />
     </div>
   );
 };
 
-export default Home;
+export default Adoptions;
