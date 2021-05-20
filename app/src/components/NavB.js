@@ -26,7 +26,7 @@ const NavB = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/">About Us</Nav.Link>
+          <Nav.Link href="/about">About Us</Nav.Link>
           <Nav.Link href="/adopt">Adoption Page</Nav.Link>
           <NavDropdown title="Quick Links" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Donate</NavDropdown.Item>
