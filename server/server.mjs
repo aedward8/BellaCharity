@@ -55,8 +55,11 @@ app.get("/api/dogfact", async (request, response) => {
   const fact = await fetch(
     "https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1",
   );
-  console.log(fact);
-  return response.json(await fact.json());
+
+  const [factData] = await fact.json();
+  console.log(factData);
+  // fact is response object parsed by json method to return JS object. Destructure fact to take out of the array saved to factData
+  return response.json(factData); // make json object header with json body, takes js object and turns into json to be sent over through http
 });
 
 app.get("/api/ping", (request, response) =>
