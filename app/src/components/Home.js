@@ -1,5 +1,6 @@
 import * as React from "react";
 
+// import { Image } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 
 import MainPhoto from "../photos/bella-main.jpg";
@@ -36,29 +37,32 @@ const Home = () => {
       </div>
       <div
         className="cards"
-        style={{ display: "flex ", "justify-content": "space-between" }}
+        style={{ display: "flex ", justifyContent: "space-between" }}
       >
         <FrontPageCard
           name="Resident Animals"
           desc="Say hi to some of our forever animals that we couldn't bear to say goodbye to!"
           img={Resident}
+          style={{ marginRight: "1rem" }}
         />
         <FrontPageCard
           name="Adopt Me"
           desc="View all the furbabies that are available to be adopted into your family"
           img={Adopt}
+          style={{ marginRight: "1rem" }}
         />
         <FrontPageCard
           name="Foster Me"
           desc="Some of our rescues need practice being inside a home and socializing with humans before they are ready for adoption"
           img={Foster}
+          style={{ marginRight: "1rem" }}
         />
       </div>
       <div
         style={{
           display: "flex ",
-          "flex-direction": "column",
-          "justify-content": "center",
+          flexDirection: "column",
+          justifyContent: "center",
         }}
       >
         <h1>Get Involved</h1> <br />
