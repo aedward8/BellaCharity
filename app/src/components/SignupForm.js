@@ -3,7 +3,6 @@ import * as React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-import "../styles.css";
 import * as apiClient from "../apiClient";
 
 //Formik
