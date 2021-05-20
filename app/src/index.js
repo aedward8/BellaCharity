@@ -4,13 +4,10 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-<<<<<<< HEAD
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles-basics.css";
-=======
 //import "./styles.css";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
->>>>>>> main
 
 ReactDOM.render(
   <React.StrictMode>
