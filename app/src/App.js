@@ -17,6 +17,9 @@ import "./styles.css";
 import "./styles-custom.css";
 
 const App = () => {
+  // const LIGHT = window.matchMedia("(prefers-color-scheme: light)").matches;
+  // const DARK = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
   return (
     <>
       <NavB />

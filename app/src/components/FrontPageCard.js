@@ -11,12 +11,16 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   root: {
     maxWidth: "90%",
-    // height: "100%",
+    height: "100%",
     // marginBottom: "1rem",
   },
   media: {
     height: 400,
   },
+  // muicardactions: {
+  //   display: "flex",
+  //   alignSelf: "flexEnd",
+  // },
 });
 
 export default function FrontPageCard(prop) {

@@ -45,7 +45,7 @@ const Home = () => {
 
       <Container style={{ marginBottom: "2rem" }}>
         <Row>
-          <Col>
+          <Col xs={12} md={4}>
             <FrontPageCard
               name="Resident Animals"
               desc="Say hi to some of our forever animals that we couldn't bear to say goodbye to"
@@ -53,7 +53,7 @@ const Home = () => {
               style={{ marginRight: "1rem" }}
             />
           </Col>
-          <Col>
+          <Col xs={12} md={4}>
             <FrontPageCard
               name="Adopt Me"
               desc="View all the furbabies that are available to be adopted into your family"
@@ -61,7 +61,7 @@ const Home = () => {
               style={{ marginRight: "1rem" }}
             />
           </Col>
-          <Col>
+          <Col xs={12} md={4}>
             <FrontPageCard
               name="Foster Me"
               desc="Foster our rescues and help them prepare to be adopted and ready to join a family"
