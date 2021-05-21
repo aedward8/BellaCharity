@@ -10,6 +10,7 @@ import Foster from "../photos/khaleesi.jpeg";
 import Adopt from "../photos/osito.JPG";
 import Resident from "../photos/resident-bella.png";
 
+import DogFact from "./DogFact";
 import FrontPageCard from "./FrontPageCard";
 import HomeButtons from "./HomeButtons";
 
@@ -77,6 +78,10 @@ const Home = () => {
           justifyContent: "center",
         }}
       > */}
+      <Container style={{ marginBottom: "2rem" }}>
+        <h1>Did You Know?</h1>
+        <DogFact />
+      </Container>
       <Container>
         {/* How to center this column beside center */}
         <Row>

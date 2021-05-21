@@ -70,7 +70,7 @@ const Donate = () => {
           </form>
         </center>
       </Container>
-      <Container>
+      {/* <Container>
         <script
           src="https://donorbox.org/widget.js"
           paypalExpress="false"
@@ -87,7 +87,7 @@ const Donate = () => {
           //   style="max-width: 500px; min-width: 250px; max-height:none!important"
           width="100%"
         ></iframe>
-      </Container>
+      </Container> */}
     </>
   );
 };

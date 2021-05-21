@@ -18,7 +18,7 @@ const Adoptions = () => {
 
   return (
     <div>
-      <h1>This is Adoption Page</h1>
+      <h1>Meet our adoptable rescues and fosters animals!</h1>
       <AnimalList animals={animals} />
       <VolunteerButton />
     </div>
