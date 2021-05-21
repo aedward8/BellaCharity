@@ -4,9 +4,9 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
-import DonationCards from "./DonationCards";
+import dogtoys from "../photos/dogtoys.jpeg";
 
-// import General from "../photos/resident-bella.png";
+import DonationCards from "./DonationCards";
 
 const Donate = () => {
   return (
@@ -28,6 +28,7 @@ const Donate = () => {
             <DonationCards
               name="Pet Supplies Donation"
               desc="A donation to the pets supply fund will go directly to items and services required for pets. This may include but is not limited to food, water, medication, veterinary bills, toys, crates, leashes, blankets, and grooming supplies."
+              img={dogtoys}
             />
           </Col>
           <Col>
