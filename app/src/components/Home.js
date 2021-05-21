@@ -14,8 +14,6 @@ import FrontPageCard from "./FrontPageCard";
 import HomeButtons from "./HomeButtons";
 
 const Home = () => {
-  React.useEffect(() => {}, []);
-
   return (
     <div>
       <Container>
@@ -44,12 +42,12 @@ const Home = () => {
         </Row>
       </Container>
 
-      <Container>
+      <Container style={{ marginBottom: "2rem" }}>
         <Row>
           <Col>
             <FrontPageCard
               name="Resident Animals"
-              desc="Say hi to some of our forever animals that we couldn't bear to say goodbye to!"
+              desc="Say hi to some of our forever animals that we couldn't bear to say goodbye to"
               img={Resident}
               style={{ marginRight: "1rem" }}
             />
@@ -65,7 +63,7 @@ const Home = () => {
           <Col>
             <FrontPageCard
               name="Foster Me"
-              desc="Some of our rescues need practice being inside a home and socializing with humans before they are ready for adoption"
+              desc="Foster our rescues and help them prepare to be adopted and ready to join a family"
               img={Foster}
               style={{ marginRight: "1rem" }}
             />

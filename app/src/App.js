@@ -5,6 +5,7 @@ import { Router } from "@reach/router";
 
 import About from "./components/About";
 import Adoptions from "./components/Adoptions";
+import Donate from "./components/Donate";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import NavB from "./components/NavB";
@@ -28,6 +29,7 @@ const App = () => {
           <Home path="/" />
           <About path="/about" />
           <Adoptions path="/adopt" />
+          <Donate path="/donate" />
           <SignupForm path="/signup-form" />
         </Router>
       </main>

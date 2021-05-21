@@ -29,6 +29,7 @@ export default function IconLabelButtons() {
         variant="contained"
         color="secondary"
         size="large"
+        href="/donate"
         className={classes.button}
         startIcon={<MonetizationOnIcon />}
       >
