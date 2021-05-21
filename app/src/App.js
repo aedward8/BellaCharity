@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import NavB from "./components/NavB";
 import SignupForm from "./components/SignupForm";
+import TermsAndConditions from "./components/TermsAndConditions";
 
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,9 +18,6 @@ import "./styles.css";
 import "./styles-custom.css";
 
 const App = () => {
-  // const LIGHT = window.matchMedia("(prefers-color-scheme: light)").matches;
-  // const DARK = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
   return (
     <>
       <NavB />
@@ -34,6 +32,7 @@ const App = () => {
           <Adoptions path="/adopt" />
           <Donate path="/donate" />
           <SignupForm path="/signup-form" />
+          <TermsAndConditions path="/terms-conditions" />
         </Router>
       </main>
       <Footer />

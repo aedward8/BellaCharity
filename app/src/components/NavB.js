@@ -37,7 +37,7 @@ const NavB = () => {
               Volunteer or Foster
             </NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">
+            <NavDropdown.Item href="/terms-conditions">
               Terms & Conditions
             </NavDropdown.Item>
           </NavDropdown>
