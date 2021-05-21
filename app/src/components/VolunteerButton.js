@@ -11,9 +11,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function IconLabelButtons() {
+export default function IconLabelButtons(prop) {
   const classes = useStyles();
-
+  const { onFilter } = prop;
   return (
     <div>
       <Button
@@ -22,6 +22,7 @@ export default function IconLabelButtons() {
         size="large"
         className={classes.button}
         startIcon={<PetsIcon />}
+        // onClick={() => onFilter(animals, false)}
       >
         I want to Adopt!
       </Button>
@@ -31,6 +32,7 @@ export default function IconLabelButtons() {
         size="large"
         className={classes.button}
         startIcon={<HomeIcon />}
+        // onClick={() => onFilter(animals, true)}
       >
         I want to Foster!
       </Button>

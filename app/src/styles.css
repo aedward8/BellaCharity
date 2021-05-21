@@ -63,7 +63,7 @@ body {
   caret-color: var(--text-color);
 }
 
-@media (prefers-color-scheme: dark) {
+@media() {
   body {
     color: white;
     background-color: var(--gray-900);
@@ -145,13 +145,13 @@ a {
   }
 }
 
-@media (hover: hover) and (prefers-color-scheme: dark) {
+@media (hover: hover) and (prefers-color-scheme: light) {
   a:hover {
     text-decoration-color: white;
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@media() {
   a {
     text-decoration-color: var(--gray-700);
     -webkit-text-decoration-color: var(--gray-700);
@@ -193,7 +193,7 @@ input[type="number"] {
   appearance: none;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   input[type="email"],
   input[type="text"],
   input[type="number"] {
@@ -236,7 +236,7 @@ select {
   background-position: center right 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   select {
     background-color: var(--gray-800);
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.304 125.304"><path d="M62.652 103.895L0 21.41h125.304" fill="%23ffffff"/></svg>');
@@ -262,7 +262,7 @@ textarea {
     sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   textarea {
     background-color: var(--gray-800);
     border-color: var(--gray-700);
@@ -299,7 +299,7 @@ input[type="checkbox"] {
   margin-right: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   input[type="checkbox"] {
     background-color: var(--gray-800);
     border-color: var(--gray-600);
@@ -322,7 +322,7 @@ input[type="checkbox"]:checked:focus-visible {
   border-color: var(--focus-ring-color);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   input[type="checkbox"]:checked {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="78.369" height="78.369" viewBox="0 0 78.369 78.369"><path fill="%23343434" d="M78.05 19.015l-48.592 48.59c-.428.43-1.12.43-1.548 0L.32 40.016c-.427-.426-.427-1.12 0-1.547l6.704-6.704c.428-.427 1.12-.427 1.548 0l20.113 20.112 41.113-41.113c.43-.427 1.12-.427 1.548 0l6.703 6.704c.427.427.427 1.12 0 1.548z"/></svg>');
     background-color: white;
@@ -345,7 +345,7 @@ input[type="radio"] {
   display: flex;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   input[type="radio"] {
     border: 2px solid white;
   }
@@ -366,7 +366,7 @@ input[type="radio"]:checked:focus-visible {
   border-color: var(--focus-ring-color);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   input[type="radio"]:checked {
     border: 2px solid white;
   }
@@ -381,7 +381,7 @@ input[type="radio"]:checked::before {
   border-radius: 50%;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   input[type="radio"]:checked::before {
     background-color: white;
   }
@@ -412,7 +412,7 @@ button {
   user-select: none;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   input[type="submit"],
   input[type="reset"],
   input[type="button"],
@@ -433,7 +433,7 @@ button {
   }
 }
 
-@media (hover: hover) and (prefers-color-scheme: dark) {
+@media (hover: hover) and (prefers-color-scheme: light) {
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   input[type="button"]:hover,
@@ -484,7 +484,7 @@ td {
   border-bottom: 2px solid var(--gray-300);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   td {
     border-color: var(--gray-700);
   }
@@ -504,7 +504,7 @@ code {
   border-radius: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   code {
     background-color: var(--gray-700);
   }
@@ -536,7 +536,7 @@ blockquote {
   margin-bottom: 1.563rem;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   blockquote {
     border-left: 0.25rem solid var(--gray-700);
   }
@@ -601,7 +601,7 @@ abbr {
   margin-top: 0.25rem;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   .error {
     color: var(--red-400);
   }

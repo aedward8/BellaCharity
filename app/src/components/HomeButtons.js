@@ -20,6 +20,7 @@ export default function IconLabelButtons() {
         variant="contained"
         color="secondary"
         size="large"
+        href="/signup-form"
         className={classes.button}
         startIcon={<EmojiPeopleIcon />}
       >
