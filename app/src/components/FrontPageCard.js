@@ -16,10 +16,6 @@ const useStyles = makeStyles({
   media: {
     height: 400,
   },
-  // muicardactions: {
-  //   display: "flex",
-  //   alignSelf: "flexEnd",
-  // },
 });
 
 export default function FrontPageCard(prop) {

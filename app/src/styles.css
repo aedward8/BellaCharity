@@ -196,7 +196,7 @@ input[type="number"] {
   input[type="email"],
   input[type="text"],
   input[type="number"] {
-    color: white;
+    color: black;
   }
 
   input[type="email"]::placeholder,
@@ -594,12 +594,6 @@ abbr {
   margin-top: 0.25rem;
 }
 
-@media (prefers-color-scheme: light) {
-  .error {
-    color: var(--red-400);
-  }
-}
-
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed !important;
@@ -640,4 +634,8 @@ label.checkbox {
 
 button[type="submit"] {
   margin-top: 1rem;
+}
+
+input.error {
+  border-color: red;
 }
