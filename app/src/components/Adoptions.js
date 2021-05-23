@@ -1,38 +1,57 @@
 import * as React from "react";
 
+import Container from "react-bootstrap/esm/Container";
+
 import * as apiClient from "../apiClient";
 
+import AdoptButton from "./AdoptButton";
 import AnimalList from "./AnimalList";
 import VolunteerButton from "./VolunteerButton";
 
 const Adoptions = () => {
   const [animals, setAnimals] = React.useState([]);
 
-  const loadAnimals = async () => setAnimals(await apiClient.getAnimals());
-  let isFoster;
-  const onFilter = (animals, isFoster) => {
-    let animalsList = [];
-    for (let i = 0; i < animals.length; i++) {
-      // if (isFoster === true) {
-      // }
-    }
-    return animalsList;
-    //adopt ,foster ==false
+  const [filteredAnimals, setFilteredAnimals] = React.useState([]);
 
-    //foster , foster === true
+  const loadAnimals = async () => {
+    setAnimals(await apiClient.getAnimals());
+    //setFilteredAnimals(animals);
+  };
+
+  const onFilter = (isFoster) => {
+    if (isFoster === false) {
+      setFilteredAnimals(
+        animals.filter((animal) => {
+          return animal.foster === false;
+        }),
+      );
+    } else if (isFoster === true) {
+      setFilteredAnimals(
+        animals.filter((animal) => {
+          return animal.foster === true;
+        }),
+      );
+    } else {
+      setFilteredAnimals(animals);
+    }
   };
 
   React.useEffect(() => {
-    loadAnimals();
-  }, []);
-
-  console.log(animals);
+    if (animals.length === 0) {
+      loadAnimals();
+    }
+    console.log(animals);
+    setFilteredAnimals(animals);
+  }, [animals, setFilteredAnimals]);
 
   return (
     <div>
-      <h1>Meet our adoptable rescues and fosters animals!</h1>
-      <AnimalList animals={animals} />
-      <VolunteerButton onFilter={onFilter(animals, isFoster)} />
+      <Container>
+        <h1>Meet our adoptable rescues and fosters animals!</h1>
+        <VolunteerButton onFilter={onFilter} />
+        <AnimalList animals={filteredAnimals} />
+        <AdoptButton />
+      </Container>
     </div>
   );
 };
