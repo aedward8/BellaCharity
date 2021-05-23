@@ -12,7 +12,6 @@ const useStyles = makeStyles({
   root: {
     maxWidth: "90%",
     height: "100%",
-    // marginBottom: "1rem",
   },
   media: {
     height: 400,
@@ -42,7 +41,7 @@ export default function FrontPageCard(prop) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" color="primary" href={prop.link}>
           Learn More
         </Button>
       </CardActions>

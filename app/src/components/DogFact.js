@@ -13,6 +13,9 @@ import * as apiClient from "../apiClient";
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
+    border: 1,
+    borderStyle: "solid",
+    borderColor: "black",
   },
   title: {
     fontSize: 20,

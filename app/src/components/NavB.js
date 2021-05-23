@@ -2,8 +2,6 @@ import * as React from "react";
 /** @jsxImportSource @emotion/react */
 
 import InstagramIcon from "@material-ui/icons/Instagram";
-import PhoneIphoneIcon from "@material-ui/icons/PhoneIphone";
-// import { Link } from "@reach/router";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Navbar from "react-bootstrap/Navbar";
@@ -12,15 +10,12 @@ import Logo from "../photos/bellaCharityLogo.png";
 
 const NavB = () => {
   return (
-    // <Link to="/signup-form">Volunteer Form</Link> */}
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Navbar.Brand href="/">
         <img
           src={Logo}
           alt="logo - paw in hand"
           css={{ maxHeight: "50px", width: "auto" }}
-          // style={{ maxHeight: "50px", width: "auto" }}
-          // style={"object-Fit:contain"}
         />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -30,9 +25,6 @@ const NavB = () => {
           <Nav.Link href="/adopt">Adoption Page</Nav.Link>
           <NavDropdown title="Quick Links" id="collasible-nav-dropdown">
             <NavDropdown.Item href="/donate">Donate</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
-              Download Mobile App
-            </NavDropdown.Item>
             <NavDropdown.Item href="/signup-form">
               Volunteer or Foster
             </NavDropdown.Item>
@@ -45,9 +37,6 @@ const NavB = () => {
         <Nav>
           <Nav.Link href="https://www.instagram.com/thebellacharity/">
             <InstagramIcon />{" "}
-          </Nav.Link>
-          <Nav.Link href="#memes">
-            <PhoneIphoneIcon /> App
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>

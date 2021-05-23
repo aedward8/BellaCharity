@@ -23,7 +23,7 @@ const Home = () => {
 
       <Container style={{ marginBottom: "2rem" }}>
         <Row>
-          <Col xs={12} md={6}>
+          <Col xs={12} md={6} style={{ marginBottom: "2rem" }}>
             <Image src={MainPhoto} alt="Pitbull named Bella" fluid />
           </Col>
           <Col xs={12} md={6}>
@@ -45,7 +45,7 @@ const Home = () => {
 
       <Container style={{ marginBottom: "2rem" }}>
         <Row>
-          <Col xs={12} md={4}>
+          <Col xs={12} md={4} style={{ marginBottom: "2rem" }}>
             <FrontPageCard
               name="Resident Animals"
               desc="Say hi to some of our forever animals that we couldn't bear to say goodbye to"
@@ -53,20 +53,22 @@ const Home = () => {
               style={{ marginRight: "1rem" }}
             />
           </Col>
-          <Col xs={12} md={4}>
+          <Col xs={12} md={4} style={{ marginBottom: "2rem" }}>
             <FrontPageCard
               name="Adopt Me"
               desc="View all the furbabies that are available to be adopted into your family"
               img={Adopt}
-              style={{ marginRight: "1rem" }}
+              style={{ marginRight: "1rem", marginBottom: "1rem" }}
+              link={"/adopt"}
             />
           </Col>
-          <Col xs={12} md={4}>
+          <Col xs={12} md={4} style={{ marginBottom: "2rem" }}>
             <FrontPageCard
               name="Foster Me"
               desc="Foster our rescues and help them prepare to be adopted and ready to join a family"
               img={Foster}
-              style={{ marginRight: "1rem" }}
+              style={{ marginRight: "2rem" }}
+              link={"/adopt"}
             />
           </Col>
         </Row>
