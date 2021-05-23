@@ -20,7 +20,6 @@ html {
 
 :root {
   --gray-900: #1a202c;
-  --gray-800: #2d3748;
   --gray-700: #4a5568;
   --gray-600: #718096;
   --gray-500: #a0aec0;
@@ -197,8 +196,6 @@ input[type="number"] {
   input[type="email"],
   input[type="text"],
   input[type="number"] {
-    background-color: var(--gray-800);
-    border-color: var(--gray-700);
     color: white;
   }
 
@@ -264,9 +261,6 @@ textarea {
 
 @media (prefers-color-scheme: light) {
   textarea {
-    background-color: var(--gray-800);
-    border-color: var(--gray-700);
-    color: white;
   }
 }
 
@@ -418,7 +412,6 @@ button {
   input[type="button"],
   button {
     background-color: white;
-    border: 2px solid white;
     color: var(--gray-800);
   }
 }

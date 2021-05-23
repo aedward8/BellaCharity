@@ -73,19 +73,11 @@ const Home = () => {
           </Col>
         </Row>
       </Container>
-      {/* <div
-        style={{
-          display: "flex ",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
-      > */}
       <Container style={{ marginBottom: "2rem" }}>
         <h1>Did You Know?</h1>
         <DogFact />
       </Container>
       <Container>
-        {/* How to center this column beside center */}
         <Row>
           <Col xs={12} md={12} lg={12}>
             <center>

@@ -1,6 +1,7 @@
 input[type="email"],
 input[type="text"],
 input[type="number"],
+/* input[type="checkbox"], */
 textarea,
 select {
   width: 400px;

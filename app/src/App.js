@@ -14,8 +14,10 @@ import TermsAndConditions from "./components/TermsAndConditions";
 
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./styles.css";
+
 import "./styles-custom.css";
+import "./styles.css";
+// import "./styles-basics.css";
 
 const App = () => {
   return (

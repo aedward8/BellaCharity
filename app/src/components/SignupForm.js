@@ -1,9 +1,49 @@
 import * as React from "react";
 
-import { Formik, Field, Form, ErrorMessage } from "formik";
+import styled from "@emotion/styled";
+/** @jsxImportSource @emotion/react */
+import { Formik, Field, Form, ErrorMessage, useField } from "formik";
 import * as Yup from "yup";
 
 import * as apiClient from "../apiClient";
+
+// Styled components ....
+const StyledSelect = styled.select`
+  color: var(--blue);
+`;
+
+const StyledErrorMessage = styled.div`
+  font-size: 12px;
+  color: var(--red-600);
+  width: 400px;
+  margin-top: 0.25rem;
+  &:before {
+    content: "❌ ";
+    font-size: 10px;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: var(--red-300);
+  }
+`;
+
+const StyledLabel = styled.label`
+  margin-top: 1rem;
+`;
+
+const MySelect = ({ label, ...props }) => {
+  // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
+  // which we can spread on <input> and alse replace ErrorMessage entirely.
+  const [field, meta] = useField(props);
+  return (
+    <>
+      <StyledLabel htmlFor={props.id || props.name}>{label}</StyledLabel>
+      <StyledSelect {...field} {...props} />
+      {meta.touched && meta.error ? (
+        <StyledErrorMessage>{meta.error}</StyledErrorMessage>
+      ) : null}
+    </>
+  );
+};
 
 //Formik
 const SignupForm = () => {
@@ -78,7 +118,7 @@ const SignupForm = () => {
         <label htmlFor="firstName">First Name</label>
         <Field name="firstName" type="text" />
         {/* field component has handleChange,handleBlur, & values */}
-        <ErrorMessage name="firstName" />
+        <ErrorMessage className="error" name="firstName" />
 
         <label htmlFor="lastName">Last Name</label>
         <Field name="lastName" type="text" />
@@ -131,6 +171,7 @@ const SignupForm = () => {
           <Field name="acceptedTerms" type="checkbox" /> I Agree to The Bella
           Charity Terms and Conditions
         </label>
+
         <ErrorMessage name="acceptedTerms" />
 
         <div>
