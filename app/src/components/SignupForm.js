@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Formik, Field, Form, ErrorMessage, useField } from "formik";
+import { Formik, Field, Form, useField } from "formik";
 import * as Yup from "yup";
 
 import * as apiClient from "../apiClient";
@@ -131,7 +131,6 @@ const SignupForm = () => {
 
           <label htmlFor="address">Address</label>
           <Field style={{ marginBottom: "1rem" }} name="address" type="text" />
-          <ErrorMessage name="address" />
 
           <div id="expertise-group">
             Check Areas of expertise

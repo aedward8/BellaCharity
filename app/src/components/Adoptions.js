@@ -37,9 +37,12 @@ const Adoptions = () => {
   };
 
   React.useEffect(() => {
+    console.log("one");
     if (animals.length === 0) {
+      console.log("two");
       loadAnimals();
     }
+    console.log("three");
     console.log(animals);
     setFilteredAnimals(animals);
   }, [animals, setFilteredAnimals]);

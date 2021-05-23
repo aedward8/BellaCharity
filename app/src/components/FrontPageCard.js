@@ -26,7 +26,7 @@ export default function FrontPageCard(prop) {
       <CardMedia
         className={classes.media}
         image={prop.img}
-        title="Contemplative Reptile"
+        title={prop.title}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">

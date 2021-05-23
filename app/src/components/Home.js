@@ -51,6 +51,7 @@ const Home = () => {
               desc="Say hi to some of our forever animals that we couldn't bear to say goodbye to"
               img={Resident}
               style={{ marginRight: "1rem" }}
+              title="Pitbull Bella sitting on Grandpa's lap"
             />
           </Col>
           <Col xs={12} md={4} style={{ marginBottom: "2rem" }}>
@@ -60,6 +61,7 @@ const Home = () => {
               img={Adopt}
               style={{ marginRight: "1rem", marginBottom: "1rem" }}
               link={"/adopt"}
+              title="Osito the pomeranian dog in desert background"
             />
           </Col>
           <Col xs={12} md={4} style={{ marginBottom: "2rem" }}>
@@ -69,6 +71,7 @@ const Home = () => {
               img={Foster}
               style={{ marginRight: "2rem" }}
               link={"/adopt"}
+              title="Khaleesi the Calico cat with treebackground"
             />
           </Col>
         </Row>

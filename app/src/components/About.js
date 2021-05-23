@@ -12,7 +12,12 @@ const About = () => {
       <Container>
         <center>
           <Row>
-            <Image src={bellabeach} alt="Pitbull named Bella" fluid />
+            <Image
+              style={{ marginBottom: "1rem" }}
+              src={bellabeach}
+              alt="Pitbull named Bella"
+              fluid
+            />
           </Row>
           <h1>Our Mission</h1>
           <h3>

@@ -21,7 +21,7 @@ const AnimalList = ({ animals }) => {
           overflowY: "scroll",
           maxHeight: "50vh",
           borderStyle: "solid",
-          borderColor: "white",
+          borderColor: "black",
         }}
       >
         {display}

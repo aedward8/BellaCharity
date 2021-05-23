@@ -11,12 +11,16 @@ import images from "../photos";
 
 const useStyles = makeStyles({
   root: {
-    display: "flex",
-    maxWidth: 800,
+    maxWidth: "90%",
+    height: "100%",
+    "@media (min-width:330px)": {
+      display: "flex",
+    },
   },
   media: {
-    height: "auto",
-    minWidth: 250,
+    height: 300,
+    maxHeight: "40%",
+    minWidth: "35%",
   },
 });
 
