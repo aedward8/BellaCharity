@@ -1,9 +1,6 @@
 import React from "react";
 
-// import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
-// import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
@@ -42,7 +39,6 @@ export default function AnimalCard({
       variant="outlined"
       style={{ marginBottom: "1rem", marginLeft: "1rem" }}
     >
-      {/* <CardActionArea> */}
       <CardMedia
         className={classes.media}
         image={images[picture_link]}
@@ -51,28 +47,21 @@ export default function AnimalCard({
 
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
-          {name}
+          {name}{" "}
         </Typography>
         <Typography gutterBottom variant="h6" component="h5">
+          {foster ? (
+            <div>
+              <HomeSharpIcon />
+              Foster Home Needed
+            </div>
+          ) : null}
           <span>&#8226;</span> {breed}, {age}, {weight}, {gender}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
           {blurb}
         </Typography>
       </CardContent>
-      {/* </CardActionArea> */}
-      <CardActions>
-        {foster ? (
-          <div>
-            <HomeSharpIcon />
-            Foster Me
-          </div>
-        ) : null}
-
-        {/* <Button size="small" color="primary">
-          Learn More
-        </Button> */}
-      </CardActions>
     </Card>
   );
 }
