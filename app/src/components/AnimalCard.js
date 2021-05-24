@@ -41,7 +41,7 @@ export default function AnimalCard({
     <Card
       className={classes.root}
       variant="outlined"
-      style={{ marginBottom: "1rem", marginLeft: "1rem" }}
+      style={{ marginBottom: "1rem", marginLeft: "auto", marginRight: "auto " }}
     >
       <CardMedia
         className={classes.media}
