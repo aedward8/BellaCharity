@@ -19,7 +19,7 @@ const About = () => {
               fluid
             />
           </Row>
-          <h1>Our Mission</h1>
+          <h1 data-testid="about-1">Our Mission</h1>
           <h3>
             Our Mission The Bella Charity’s mission is to save and improve lives
             wherever possible. Ultimately, The Bella Charity aims to create a

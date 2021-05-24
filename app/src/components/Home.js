@@ -16,7 +16,7 @@ import HomeButtons from "./HomeButtons";
 
 const Home = () => {
   return (
-    <div>
+    <div data-testid="home-1">
       <Container>
         <h1>Welcome to Bella Charity!</h1>
       </Container>

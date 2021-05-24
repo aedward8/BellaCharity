@@ -34,6 +34,7 @@ export default function AnimalCard({
   blurb,
   foster,
   picture_link,
+  alt_text,
 }) {
   const classes = useStyles();
 
@@ -46,11 +47,16 @@ export default function AnimalCard({
       <CardMedia
         className={classes.media}
         image={images[picture_link]}
-        title="Contemplative Reptile"
+        title={alt_text}
       />
 
       <CardContent>
-        <Typography gutterBottom variant="h5" component="h2">
+        <Typography
+          data-testid={`animalcard-1`}
+          gutterBottom
+          variant="h5"
+          component="h2"
+        >
           {name}{" "}
         </Typography>
         <Typography gutterBottom variant="h6" component="h5">
