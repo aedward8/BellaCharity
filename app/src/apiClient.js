@@ -62,6 +62,5 @@ export const getAnimals = async () => {
 // Get Dog Fact
 export const getFact = async () => {
   const response = await fetch("/api/dogfact");
-  console.log(response);
   return response.json();
 };
