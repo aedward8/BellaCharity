@@ -62,13 +62,13 @@ body {
   caret-color: var(--text-color);
 }
 
-@media() {
+/* @media() {
   body {
     color: white;
     background-color: var(--gray-900);
     caret-color: white;
   }
-}
+} */
 
 /* Typography
   ––––––––––––––––––––––––––––––––– */
@@ -149,13 +149,13 @@ a {
     text-decoration-color: white;
   }
 }
-
+/* 
 @media() {
   a {
     text-decoration-color: var(--gray-700);
     -webkit-text-decoration-color: var(--gray-700);
   }
-}
+} */
 
 a:focus-visible {
   box-shadow: 0 0 0 2px var(--focus-ring-color);
@@ -257,11 +257,6 @@ textarea {
   font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
     "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial,
     sans-serif;
-}
-
-@media (prefers-color-scheme: light) {
-  textarea {
-  }
 }
 
 input:focus,
