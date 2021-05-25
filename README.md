@@ -37,7 +37,7 @@ An additional goal is to use a transactional email API such as Postman or Mail G
 Below is the user work flow with the MVP highlighted in red and a webpage mock up for the home page and adoption page.
 ![alt text](https://github.com/aedward8/BellaCharity/blob/main/docs/images/UserFlow-Bella.png?raw=true "User Work Flow w/MVP")
 ![alt text](https://github.com/aedward8/BellaCharity/blob/main/docs/images/BellaHomePage.png "Homepage Mockup")
-![alt text](https://github.com/aedward8/BellaCharity/blob/main/docs/images/Bella_Adopt%20_age.png? "Adopt page Mockup")
+![alt text](https://github.com/aedward8/BellaCharity/blob/main/docs/images/Bella_Adopt%20_age.png?raw=true "Adopt page Mockup")
 
 
 ## Technology
