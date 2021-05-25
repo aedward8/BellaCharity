@@ -34,6 +34,12 @@ The main goal is to use a Google API so that the form results are in Google Shee
 
 An additional goal is to use a transactional email API such as Postman or Mail Gun to send form results or alerts to either the adoption coordinator or volunteer coordinator. Alternatively, this is a nice to have step as data would also be stored in Google Sheets or psql database.
 
+Below is the user work flow with the MVP highlighted in red and a webpage mock up for the home page and adoption page.
+![alt text](https://github.com/aedward8/BellaCharity/blob/main/docs/images/UserFlow-Bella.png?raw=true "User Work Flow w/MVP")
+![alt text](https://github.com/aedward8/BellaCharity/blob/main/docs/images/BellaHomePage.png "Homepage Mockup")
+![alt text](https://github.com/aedward8/BellaCharity/blob/main/docs/images/Bella_Adopt%20_age.png? "Adopt page Mockup")
+
+
 ## Technology
 
 The Bella Charity website will be built with the PERN stack, which includes Postgres, Express, React & Node.js.
