@@ -27,7 +27,9 @@ const useStyles = makeStyles({
 
 export default function DogFact() {
   const classes = useStyles();
-  const [fact, setFact] = React.useState();
+  const [fact, setFact] = React.useState(
+    "Fact: At the age of 4 weeks, most dogs have developed the majority of their vocalizations",
+  );
 
   const loadFact = async () => {
     const data = await apiClient.getFact();
