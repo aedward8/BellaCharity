@@ -53,7 +53,7 @@ app.get("/api/animals", async (request, response) => {
 // Get Dog Fact
 app.get("/api/dogfact", async (request, response) => {
   const fact = await fetch(
-    "https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1",
+    "https://dog-facts-api-2.herokuapp.com/api/v1/resources/dogs?number=1",
   );
 
   const [factData] = await fact.json();
