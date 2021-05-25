@@ -15,7 +15,7 @@ export default function Footer() {
           <LocationOnIcon /> San Francisco Bay Area | <EmailIcon />{" "}
           info@bellacharity.org
         </h5>
-        <p>
+        <p data-testid="footer-1">
           The Bella Charity is registered as a 501(c)(3) non-profit
           organization. Contributions to The Bella Charity are tax-deductible to
           the extent permitted by law.

@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div data-testid="home-1">
       <Container>
-        <h1>Welcome to Bella Charity!</h1>
+        <h1>Welcome to The Bella Charity!</h1>
       </Container>
 
       <Container style={{ marginBottom: "2rem" }}>

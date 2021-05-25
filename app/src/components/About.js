@@ -21,8 +21,8 @@ const About = () => {
           </Row>
           <h1 data-testid="about-1">Our Mission</h1>
           <h3>
-            Our Mission The Bella Charity’s mission is to save and improve lives
-            wherever possible. Ultimately, The Bella Charity aims to create a
+            The Bella Charity’s mission is to save and improve lives wherever
+            possible. Ultimately, The Bella Charity aims to create a
             well-functioning sanctuary where animals can be rescued, sheltered,
             and properly cared for.{" "}
           </h3>

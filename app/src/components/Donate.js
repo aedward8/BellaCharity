@@ -14,7 +14,9 @@ const Donate = () => {
   return (
     <>
       <Container>
-        <h1>You Can Donate to the Bella Charity Today</h1>
+        <h1 data-testid="donate-1">
+          You Can Donate to the Bella Charity Today
+        </h1>
         <h3>
           Please make a general donation or choose the fund into which you would
           like to donate. Any amount is welcomed and is greatly appreciated.
