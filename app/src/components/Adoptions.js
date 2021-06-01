@@ -15,7 +15,6 @@ const Adoptions = () => {
 
   const loadAnimals = async () => {
     setAnimals(await apiClient.getAnimals());
-    //setFilteredAnimals(animals);
   };
 
   const onFilter = (isFoster) => {
@@ -37,11 +36,12 @@ const Adoptions = () => {
   };
 
   React.useEffect(() => {
-    if (animals.length === 0) {
-      loadAnimals();
-    }
+    loadAnimals();
+  }, []);
+
+  React.useEffect(() => {
     setFilteredAnimals(animals);
-  }, [animals, setFilteredAnimals]);
+  }, [animals]);
 
   return (
     <div>
