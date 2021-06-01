@@ -13,41 +13,34 @@ const Adoptions = () => {
 
   const [filteredAnimals, setFilteredAnimals] = React.useState([]);
 
-  const loadAnimals = async () => {
-    setAnimals(await apiClient.getAnimals());
-  };
-
-  const onFilter = (isFoster) => {
-    if (isFoster === false) {
-      setFilteredAnimals(
-        animals.filter((animal) => {
-          return animal.foster === false;
-        }),
-      );
-    } else if (isFoster === true) {
-      setFilteredAnimals(
-        animals.filter((animal) => {
-          return animal.foster === true;
-        }),
-      );
-    } else {
-      setFilteredAnimals(animals);
-    }
-  };
-
   React.useEffect(() => {
-    loadAnimals();
+    (async () => {
+      setAnimals(await apiClient.getAnimals());
+    })();
   }, []);
 
   React.useEffect(() => {
     setFilteredAnimals(animals);
   }, [animals]);
 
+  const showAnimals = (status) => {
+    switch (status) {
+      case "adopt":
+        setFilteredAnimals(animals.filter((animal) => !animal.foster));
+        break;
+      case "foster":
+        setFilteredAnimals(animals.filter((animal) => animal.foster));
+        break;
+      default:
+        setFilteredAnimals(animals);
+    }
+  };
+
   return (
     <div>
       <Container>
         <h1>Meet our adoptable rescues and fosters animals!</h1>
-        <VolunteerButton onFilter={onFilter} />
+        <VolunteerButton {...{ showAnimals }} />
         <AnimalList animals={filteredAnimals} />
         <AdoptButton />
       </Container>

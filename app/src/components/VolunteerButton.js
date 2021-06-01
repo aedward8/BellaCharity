@@ -12,9 +12,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function IconLabelButtons(prop) {
+export default function IconLabelButtons({ showAnimals }) {
   const classes = useStyles();
-  const { onFilter } = prop;
   return (
     <Container>
       <Button
@@ -27,7 +26,7 @@ export default function IconLabelButtons(prop) {
             <PetsIcon /> <HomeIcon />
           </>
         }
-        onClick={() => onFilter("neither")}
+        onClick={() => showAnimals("all")}
       >
         all animals
       </Button>{" "}
@@ -37,7 +36,7 @@ export default function IconLabelButtons(prop) {
         size="large"
         className={classes.button}
         startIcon={<PetsIcon />}
-        onClick={() => onFilter(false)}
+        onClick={() => showAnimals("adopt")}
       >
         adoption animals
       </Button>{" "}
@@ -47,7 +46,7 @@ export default function IconLabelButtons(prop) {
         size="large"
         className={classes.button}
         startIcon={<HomeIcon />}
-        onClick={() => onFilter(true)}
+        onClick={() => showAnimals("foster")}
       >
         foster animals
       </Button>
