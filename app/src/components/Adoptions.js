@@ -15,13 +15,11 @@ const Adoptions = () => {
 
   React.useEffect(() => {
     (async () => {
-      setAnimals(await apiClient.getAnimals());
+      const animals = await apiClient.getAnimals();
+      setAnimals(animals);
+      setFilteredAnimals(animals);
     })();
   }, []);
-
-  React.useEffect(() => {
-    setFilteredAnimals(animals);
-  }, [animals]);
 
   const showAnimals = (status) => {
     switch (status) {
