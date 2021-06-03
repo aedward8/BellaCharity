@@ -6,39 +6,35 @@ import * as apiClient from "../apiClient";
 
 import AdoptButton from "./AdoptButton";
 import AnimalList from "./AnimalList";
-import VolunteerButton from "./VolunteerButton";
+import VolunteerButtons from "./VolunteerButtons";
 
 const Adoptions = () => {
   const [animals, setAnimals] = React.useState([]);
-
-  const [filteredAnimals, setFilteredAnimals] = React.useState([]);
+  const [filter, setFilter] = React.useState("all");
 
   React.useEffect(() => {
     (async () => {
-      const animals = await apiClient.getAnimals();
-      setAnimals(animals);
-      setFilteredAnimals(animals);
+      setAnimals(await apiClient.getAnimals());
     })();
   }, []);
 
-  const showAnimals = (status) => {
-    switch (status) {
-      case "adopt":
-        setFilteredAnimals(animals.filter((animal) => !animal.foster));
-        break;
-      case "foster":
-        setFilteredAnimals(animals.filter((animal) => animal.foster));
-        break;
-      default:
-        setFilteredAnimals(animals);
-    }
-  };
+  let filteredAnimals;
+  switch (filter) {
+    case "adopt":
+      filteredAnimals = animals.filter((animal) => !animal.foster);
+      break;
+    case "foster":
+      filteredAnimals = animals.filter((animal) => animal.foster);
+      break;
+    default:
+      filteredAnimals = animals;
+  }
 
   return (
     <div>
       <Container>
         <h1>Meet our adoptable rescues and fosters animals!</h1>
-        <VolunteerButton {...{ showAnimals }} />
+        <VolunteerButtons {...{ filter, setFilter }} />
         <AnimalList animals={filteredAnimals} />
         <AdoptButton />
       </Container>
